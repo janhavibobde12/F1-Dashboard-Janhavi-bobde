@@ -1,0 +1,280 @@
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #101010;
+    color: #ffffff;
+    line-height: 1.7;
+}
+a {
+    text-decoration: none;
+}
+section {
+    padding: 75px 6%;
+}
+/* ===== NAVIGATION ===== */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #151515;
+    border-bottom: 2px solid #e10600;
+    padding: 18px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.logo {
+    color: #e10600;
+    font-size: 21px;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+nav ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #e10600;
+}
+/* ===== HERO SECTION ===== */
+.hero {
+    min-height: 78vh;
+    padding: 100px 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background:
+        radial-gradient(ellipse at center, #292020 0%, #101010 70%);
+    border-bottom: 1px solid #333333;
+}
+.hero .subtitle {
+    color: #e10600;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+.hero h1 {
+    max-width: 950px;
+    font-size: clamp(36px, 6vw, 68px);
+    line-height: 1.15;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    font-weight: 900;
+}
+.hero h1 span {
+    color: #e10600;
+}
+.hero > p:not(.subtitle) {
+    max-width: 750px;
+    color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block;
+    padding: 13px 27px;
+    background: #e10600;
+    border: 2px solid #e10600;
+    border-radius: 4px;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    background: transparent;
+    color: #e10600;
+    transform: translateY(-3px);
+}
+/* ===== SECTION HEADINGS ===== */
+section h2 {
+    text-align: center;
+    font-size: clamp(26px, 4vw, 38px);
+    margin-bottom: 22px;
+    text-transform: uppercase;
+}
+section h2::after {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 4px;
+    background: #e10600;
+    margin: 12px auto 0;
+    border-radius: 5px;
+}
+section > p {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    text-align: center;
+    color: #c5c5c5;
+}
+/* ===== ABOUT SECTION ===== */
+#about {
+    background: #151515;
+}
+#about p {
+    max-width: 900px;
+    font-size: 16px;
+    margin: 20px auto;
+    color: #cccccc;
+}
+/* ===== FEATURES & TECHNOLOGIES ===== */
+#features,
+#technologies {
+    background: #101010;
+}
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+/* ===== CARDS ===== */
+.card {
+    background: #1b1b1b;
+    border: 1px solid #333333;
+    border-top: 4px solid #e10600;
+    border-radius: 8px;
+    padding: 28px 24px;
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #e10600;
+    box-shadow: 0 10px 25px rgba(225, 6, 0, 0.15);
+}
+.card h3 {
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+.card p {
+    color: #bbbbbb;
+    font-size: 15px;
+}
+/* ===== DASHBOARD SECTION ===== */
+#dashboard {
+    background: #151515;
+}
+.dashboard-container {
+    width: 100%;
+    max-width: 1250px;
+    margin: 35px auto 0;
+    padding: 12px;
+    background: #202020;
+    border: 1px solid #383838;
+    border-radius: 8px;
+    overflow: hidden;
+}
+/* Tableau embedded Story */
+.dashboard-container iframe {
+    display: block;
+    width: 100%;
+    height: 750px;
+    border: none;
+    background: #ffffff;
+    border-radius: 4px;
+}
+.dashboard-link {
+    text-align: center;
+    margin-top: 28px;
+}
+/* ===== TECHNOLOGY CARDS ===== */
+#technologies .card h3 {
+    color: #e10600;
+}
+/* ===== FOOTER ===== */
+footer {
+    background: #080808;
+    border-top: 2px solid #e10600;
+    text-align: center;
+    padding: 28px 15px;
+    color: #aaaaaa;
+}
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+/* ===== TABLET RESPONSIVENESS ===== */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+        justify-content: center;
+        gap: 16px;
+    }
+    .features-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .dashboard-container iframe {
+        height: 650px;
+    }
+}
+/* ===== MOBILE RESPONSIVENESS ===== */
+@media (max-width: 600px) {
+    nav {
+        padding: 16px 12px;
+    }
+    .logo {
+        font-size: 18px;
+        text-align: center;
+    }
+    nav ul {
+        gap: 12px;
+    }
+    nav ul li a {
+        font-size: 12px;
+    }
+    .hero {
+        min-height: 65vh;
+        padding: 70px 20px;
+    }
+    .hero > p:not(.subtitle) {
+        font-size: 15px;
+    }
+    section {
+        padding: 55px 5%;
+    }
+    .features-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .card {
+        padding: 24px 20px;
+    }
+    .dashboard-container {
+        padding: 5px;
+    }
+    .dashboard-container iframe {
+        height: 500px;
+    }
+    .btn {
+        padding: 11px 19px;
+        font-size: 14px;
+    }
+}
